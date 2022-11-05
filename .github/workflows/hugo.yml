@@ -48,14 +48,14 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          # Contentful secrets
+          CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
+          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN }}
         run: |
           npx contentful-hugo && \
           npx hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-        env:
-          CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
-          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
