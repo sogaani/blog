@@ -1,0 +1,6 @@
+node_modules
+content/categories
+content/posts
+content/tags
+/dst
+.env
