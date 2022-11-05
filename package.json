@@ -8,7 +8,7 @@
     "build": "npm-run-all contentful:build hugo:build",
     "contentful:build": "contentful-hugo",
     "contentful:serve": "contentful-hugo --preview",
-    "hugo:build": "hugo -d build",
+    "hugo:build": "hugo --minify",
     "hugo:serve": "hugo server",
     "hugo:clean": "rm -rf build resources public"
   },
