@@ -520,7 +520,7 @@ title = 'wanawata'
     enable = false
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "G-LBE724BQ5J"
       # whether to anonymize IP
       anonymizeIP = true
     # Fathom Analytics
